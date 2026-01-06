@@ -1,3 +1,4 @@
+
 # Salesforce LWC Practice
 
 This repository contains Lightning Web Components created while learning Salesforce LWC.
@@ -13,3 +14,9 @@ This repository contains Lightning Web Components created while learning Salesfo
 - SLDS
 - JavaScript
 # salesforce-lwc-practice
+
+## Configure Your Salesforce DX Project
+
+## Read All About It
+
+

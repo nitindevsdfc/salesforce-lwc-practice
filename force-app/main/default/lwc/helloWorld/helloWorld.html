@@ -1,0 +1,49 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base" title="Employee Information">
+      <div class="slds-p-horizontal_small">
+            <div class="main-div">
+                <h1>{welcomeMessage}</h1>            
+                <h2>{introduction}</h2>
+                <p>{educationQualification}</p>
+            </div>
+
+            <div class="main-div">
+                <h1>{website}</h1>
+            </div>
+
+        <div class="main-div" if:true={person}>
+            <p>{person.name}</p>
+            <p>{person.age}</p>
+
+            <div lwc:if={person.address}>
+                <p>{person.address.city}</p>
+                <p>{person.address.state}</p>
+                <p>{person.address.country}</p>
+            </div>
+
+            <div if:false={person.address}>
+                <p>No data available</p>
+            </div>
+        </div>
+
+        <div if:false={person}>
+            <p>No data avialable</p>
+        </div>
+
+        <div class="main-div">
+            <template for:each ={employess} for:item="employee" for:index="index">
+                <p key ={employee.id}>
+                    Name : {employee.name}, 
+                    Age : {employee.age}
+                </p>
+            </template>
+        </div>
+
+        <div class="main-div">
+            {fruits}
+        </div>
+
+      </div>
+    </lightning-card>
+    
+</template>
